@@ -1,0 +1,60 @@
+.counter {
+  display: flex;
+  height: 38px;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.counter__amount {
+  background-color: #ffc107;
+  font-weight: bold;
+  padding: 0 20px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3.5px;
+}
+
+.counter__increment {
+  background-color: #6c757d;
+  color: #6c757d;
+}
+
+.counter__decrement {
+  background-color: #17a2b8;
+  color: #17a2b8;
+}
+
+.counter__increment,
+.counter__decrement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  font-size: 17px;
+  border: none;
+  border-radius: 3.5px;
+}
+
+.counter__increment span,
+.counter__decrement span {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.counter__delete {
+  font-weight: bold;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0 5px;
+  border-radius: 3.5px;
+}
