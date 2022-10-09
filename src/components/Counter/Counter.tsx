@@ -1,3 +1,5 @@
+import { DeleteIcon } from "../Icons";
+
 import "./Counter.css";
 
 interface CounterProps {
@@ -37,7 +39,7 @@ export default function Counter({
         <span>-</span>
       </button>
       <button className="counter__delete" type="button" onClick={deleteCounter}>
-        Delete
+        <DeleteIcon />
       </button>
     </div>
   );

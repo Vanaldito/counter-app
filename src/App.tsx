@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Counter } from "./components";
+import { Counter, ShoppingCartIcon } from "./components";
 
 import { CounterInfo } from "./models";
 
@@ -41,6 +41,7 @@ export default function App() {
   return (
     <div className="app">
       <div className="items">
+        <ShoppingCartIcon />
         <span className="items__amount">{items}</span> Items
       </div>
       {counterInfo.map((info, index) => (

@@ -73,6 +73,7 @@
 }
 
 .counter__delete {
+  width: 38px;
   font-weight: bold;
   background-color: #dc3545;
   color: #fff;
