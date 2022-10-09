@@ -10,6 +10,7 @@ export default function App() {
     { amount: 0 },
     { amount: 0 },
     { amount: 0 },
+    { amount: 0 },
   ]);
 
   function changeAmount(counterIndex: number) {
