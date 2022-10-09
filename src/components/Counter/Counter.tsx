@@ -1,34 +1,34 @@
-import { useState } from "react";
-
 import "./Counter.css";
 
-export default function Counter() {
-  const [counter, setCounter] = useState(0);
+interface CounterProps {
+  amount: number;
+  changeAmount: (newAmount: number) => void;
+  deleteCounter: () => void;
+}
 
+export default function Counter({
+  amount,
+  changeAmount,
+  deleteCounter,
+}: CounterProps) {
   return (
     <div className="counter">
-      <div className="counter__amount">{counter}</div>
+      <div className="counter__amount">{amount}</div>
       <button
         className="counter__increment"
         type="button"
-        onClick={() => setCounter(counter => counter + 1)}
+        onClick={() => changeAmount(amount + 1)}
       >
         <span>+</span>
       </button>
       <button
         type="button"
         className="counter__decrement"
-        onClick={() =>
-          setCounter(counter => (counter - 1 < 0 ? 0 : counter - 1))
-        }
+        onClick={() => changeAmount(amount - 1 < 0 ? 0 : amount - 1)}
       >
         <span>-</span>
       </button>
-      <button
-        className="counter__delete"
-        type="button"
-        onClick={() => setCounter(0)}
-      >
+      <button className="counter__delete" type="button" onClick={deleteCounter}>
         Delete
       </button>
     </div>
