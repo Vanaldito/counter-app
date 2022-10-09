@@ -13,7 +13,13 @@ export default function Counter({
 }: CounterProps) {
   return (
     <div className="counter">
-      <div className="counter__amount">{amount === 0 ? "Zero" : amount}</div>
+      <div
+        className={`counter__amount${
+          amount === 0 ? " counter__amount--zero" : ""
+        }`}
+      >
+        {amount === 0 ? "Zero" : amount}
+      </div>
       <button
         className="counter__increment"
         type="button"
@@ -23,7 +29,9 @@ export default function Counter({
       </button>
       <button
         type="button"
-        className="counter__decrement"
+        className={`counter__decrement${
+          amount === 0 ? " counter__decrement--disabled" : ""
+        }`}
         onClick={() => changeAmount(amount - 1 < 0 ? 0 : amount - 1)}
       >
         <span>-</span>
