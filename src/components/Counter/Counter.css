@@ -28,12 +28,21 @@
   color: #6c757d;
 }
 
+.counter__increment:hover {
+  background-color: #5a6268;
+}
+
 .counter__decrement {
   background-color: #17a2b8;
   color: #17a2b8;
 }
 
-.counter__decrement--disabled {
+.counter__decrement:hover {
+  background-color: #138496;
+}
+
+.counter__decrement--disabled,
+.counter__decrement--disabled:hover {
   background-color: #5dbece;
   cursor: not-allowed;
 }
@@ -47,6 +56,7 @@
   font-size: 17px;
   border: none;
   border-radius: 3.5px;
+  cursor: pointer;
 }
 
 .counter__increment span,
@@ -69,4 +79,9 @@
   border: none;
   padding: 0 5px;
   border-radius: 3.5px;
+}
+
+.counter__delete:hover {
+  background-color: #c82333;
+  cursor: pointer;
 }
