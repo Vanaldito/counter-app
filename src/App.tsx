@@ -33,8 +33,16 @@ export default function App() {
     };
   }
 
+  const items = counterInfo.reduce(
+    (acc, curr) => (curr.amount > 0 ? acc + 1 : acc),
+    0
+  );
+
   return (
-    <div>
+    <div className="app">
+      <div className="items">
+        <span className="items__amount">{items}</span> Items
+      </div>
       {counterInfo.map((info, index) => (
         <Counter
           key={index}

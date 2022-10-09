@@ -2,3 +2,31 @@
   margin: 0;
   padding: 0;
 }
+
+.app {
+  background-color: #ddf2f5;
+  border: 10px solid #7fd8e6;
+  border-radius: 3.5px;
+  width: calc(100% - 30px);
+  max-width: 1000px;
+  box-sizing: border-box;
+  margin: 50px auto;
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.items {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.items span {
+  display: inline-block;
+  background-color: #17a2b8;
+  color: #fff;
+  font-weight: 700;
+  padding: 5px 25px;
+  border-radius: 20px;
+}
