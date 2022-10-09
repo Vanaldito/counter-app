@@ -13,7 +13,7 @@ export default function Counter({
 }: CounterProps) {
   return (
     <div className="counter">
-      <div className="counter__amount">{amount}</div>
+      <div className="counter__amount">{amount === 0 ? "Zero" : amount}</div>
       <button
         className="counter__increment"
         type="button"
