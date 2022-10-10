@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Counter, ShoppingCartIcon } from "./components";
+import { ClearIcon, Counter, ShoppingCartIcon } from "./components";
 
 import { CounterInfo } from "./models";
 
@@ -34,6 +34,12 @@ export default function App() {
     };
   }
 
+  function clearCounters() {
+    setCounterInfo(counterInfo =>
+      Array.from({ length: counterInfo.length }).map(() => ({ amount: 0 }))
+    );
+  }
+
   const items = counterInfo.reduce(
     (acc, curr) => (curr.amount > 0 ? acc + 1 : acc),
     0
@@ -45,6 +51,9 @@ export default function App() {
         <ShoppingCartIcon />
         <span className="items__amount">{items}</span> Items
       </div>
+      <button className="clear-button" onClick={clearCounters}>
+        <ClearIcon />
+      </button>
       {counterInfo.map((info, index) => (
         <Counter
           key={index}
